@@ -1,0 +1,232 @@
+<html>
+
+<head>
+
+  <title>Virtual Park</title>
+
+  <!-- Libs -->
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+  <script src="/aframe-extras/dist/aframe-extras.loaders.min.js"></script>
+
+</head>
+
+
+<body>
+  <a-scene background="color: black"
+    environment="preset:  forest;  active:  true;  seed:  8;  skyType:  gradient;  ;  horizonColor:  #eff9b7;  
+  lightPosition:  [object Object];  fog:  0.02;  ground:  noise;  groundYScale:  4.18;  groundTexture:  squares;  groundColor:  #937a24;  groundColor2:  #987d2e;  dressing:  trees;  
+  dressingAmount:  598;  dressingColor:  #717416;  dressingScale:  5.7;  dressingVariance:  [object Object];  gridColor:  #c5a543;  dressingOnPlayArea:  0.01">
+
+
+    <!-- lighting A-Frame. -->
+    <a-entity light="type:  ambient;  color:  #BBB;  angle:  59.73;  decay:  0.23;  intensity:  0.30"></a-entity>
+    <a-entity light=" type: directional; color: #FFF; intensity: 0.30" position="0.15778 8.39602 -30.56654"></a-entity>
+
+
+
+    <!-- Start of Sky Kites -->
+    <!-- Kite 1 Middle Kite / Animated -->
+    <a-entity gltf-model="./assets/kite/scene.gltf" position="-10.0564 8.48164 5.08714"
+      animation="property: position; to: 1 18 -3; dur: 9000; easing: linear; loop: true">
+    </a-entity>
+    <!-- Kite 2 Top Kite / Animated -->
+    <a-entity gltf-model="./assets/kite/scene.gltf" position="-0.181 12.0309 15.50433" scale="0.54762 0.54762 0.54762"
+      rotation="-180 -34.34 -180" id="kite-3"
+      animation="property: position; to: -10 12 6; dur: 16000; easing: linear; loop: true"></a-entity>
+    <!-- Kite 3 Bottom Kite / Animated -->
+    <a-entity gltf-model="./assets/kite/scene.gltf" position="7.89244 10.97402 -9.753" scale="0.717 0.717 0.717"
+      rotation="-180 -34.34 -180" id="kite-2"
+      animation="property: position; to: -10 5 -10; dur: 10000; easing: linear; loop: true"></a-entity>
+    <!-- End of Sky Kites -->
+
+
+    <a-entity rotation="-90 0 0" class="environmentGround environment" visible="" scale="1 1 4.18"
+      shadow="cast: false; receive: false"></a-entity>
+
+
+    <!-- Asset management system. -->
+    <a-assets>
+
+
+
+      <a-asset-item id="garen" src="./assets/garen/scene.gltf"></a-asset-item>
+      <a-asset-item id="dropout_bear" src="./assets/dropout_bear/scene.gltf"></a-asset-item>
+      <a-asset-item id="low_poly_dog" src="./assets/low_poly_dog/scene.gltf"></a-asset-item>
+      <a-asset-item id="shed" src="./assets/shed/scene.gltf"></a-asset-item>
+
+      <!-- <a-asset-item id="girl" src="./assets/poly-girl/scene.gltf"></a-asset-item> -->
+
+      <!-- 
+        
+        <a-asset-item id="horse-mtl" src="horse.mtl"></a-asset-item>
+        <a-mixin id="giant" scale="5 5 5"></a-mixin>
+        <audio id="neigh" src="neigh.mp3"></audio>
+
+
+
+        <video id="kentucky-derby" src="derby.mp4"></video> -->
+
+
+    </a-assets>
+
+
+    <!-- Scene -->
+    <!-- Start Around The CampFire -->
+    <!-- Firecamp -->
+    <a-entity gltf-model="./assets/campfire/scene.gltf" position="0.502 0.01 -1.564" scale="1.337 1.337 1.337">
+    </a-entity>
+    <!-- Fire -->
+    <a-entity gltf-model="./assets/fire/scene.gltf" position="-3.19043 -0.21245 -3.91677" scale="1.337 1.337 1.337"
+      animation-mixer="clip: Take 001; timeScale: 1.75">
+    </a-entity>
+    <!-- Campfire PointLight -->
+    <a-entity light="type: point; 
+        intensity: 0.8;
+        distance: 10;" position="0.502 2 -1.564"></a-entity>
+
+    <!-- Poly Girl -->
+    <a-entity gltf-model="./assets/poly-girl/scene.gltf" position="0.502 0.01 -3.35388" scale="0.86832 0.86832 0.86832"
+      animation-mixer="clip: Idle 3" rotation="0 -15.457 0" visible="">
+    </a-entity>
+    <!-- Horse -->
+    <a-entity gltf-model="./assets/horse/scene.gltf" position="0.99433 1.21615 -3.9462" scale="0.00283 0.00283 0.00272"
+      rotation="0 18.68186186803562 0"></a-entity>
+
+    <!-- Dog Shepherd Walk -->
+    <a-entity gltf-model="./assets/shepherd/scene.gltf"
+      position="3.620936414685165 -0.13182731140998424 -7.1771130080941425" scale="0.046 0.05 0.046"
+      animation-mixer="clip: WalkCycle"
+      animation="property: position; to: 5 0 0; dur: 10000; easing: linear; loop: true">
+    </a-entity>
+    <!-- Dog Shepherd Scratch -->
+    <a-entity gltf-model="./assets/shepherd/scene.gltf" position="-1.79475 -0.00548 -5.95173" scale="0.046 0.05 0.046"
+      animation-mixer="clip: SitScratchEar" rotation="0 35.26 0">
+    </a-entity>
+    <!-- Floating Robot -->
+    <a-entity gltf-model="./assets/flobot/scene.gltf" position="-1.52855 0.81804 -0.78355"
+      scale="0.01335 0.01335 0.01335" animation-mixer="clip: Take 001" rotation="0 97.53288659173464 0">
+    </a-entity>
+    <!-- End of Around The CampFire -->
+
+
+
+    <!-- Start of Outside Park Perimeter -->
+    <!-- Movie Projector -->
+    <a-entity gltf-model="./assets/projector/scene.gltf" position="5.97184 0.03956 10.61743" visible=""
+      rotation="0 -147.64148352269592 0" scale="0.04632 0.04609 0.04609"></a-entity>
+    <!-- CyberTruck -->
+    <a-entity gltf-model="./assets/cybertruck/scene.gltf" position="-5.20789 -0.02972 11.98529" rotation="0 58.251 0"
+      scale="1.06507 1.06507 1.08395"></a-entity>
+
+
+    <!-- Rock -->
+    <a-entity gltf-model="./assets/rock/scene.gltf" position="-12.27457 0.04518 5.46301" scale="1.90392 1.90392 1.82324"
+      rotation="0 -38.725 0" id="rock"></a-entity>
+    <a-entity gltf-model="./assets/rock/scene.gltf" position="-15.78881 0.04518 7.81225" scale="2.99747 2.99747 2.87045"
+      rotation="0 109.43379295439698 0" id="rock-2"></a-entity>
+    <!-- Skeleton  -->
+    <a-entity gltf-model="./assets/skeleton/scene.gltf" position="-11.70824 0.00877 8.61936" visible=""
+      rotation="0 118.66127824497887 0" animation-mixer="clip: Animation" scale="0.761 0.761 0.761"></a-entity>
+    <!-- Naked Man -->
+    <a-entity gltf-model="./assets/poly-man/scene.gltf" position="-8.63052 0.04197 3.49264"
+      rotation="0 118.66127824497887 0" animation-mixer="clip: Stay" scale="0.012 0.012 0.012"></a-entity>
+
+
+    <!-- Spawn Shed -->
+    <a-entity gltf-model="./assets/shed/scene.gltf" position="-1.40054 0.4 -13.07578" rotation="0 13.91370709695691 0"
+      scale="1 1.01 1.01"></a-entity>
+
+
+    <!-- Benches 4x -->
+    <a-entity id="one" gltf-model="./assets/bench-low/scene.gltf" position="-4.73108 0.04118 -12.46099"
+      rotation="0 0 -0.01" scale="0.00844 0.00844 0.0082"></a-entity>
+    <a-entity id="one-2" gltf-model="./assets/bench-low/scene.gltf" position="-6.86132 0.02152 -12.46099"
+      rotation="0 0 -0.01" scale="0.00844 0.00844 0.0082"></a-entity>
+    <a-entity id="one-3" gltf-model="./assets/bench-low/scene.gltf" position="-12.66936 -0.02946 -3.38004"
+      rotation="0.009740282517223996 90 0" scale="0.00844 0.00844 0.0082"></a-entity>
+    <a-entity id="one-2" gltf-model="./assets/bench-low/scene.gltf" position="14.18207 0.01816 3.2524"
+      rotation="0 -90 -0.0011459155902616466" scale="0.00844 0.00844 0.0082"></a-entity>
+
+
+    <!-- Floating Cystal -->
+    <a-entity gltf-model="./assets/crystal/scene.gltf" position="14.23108 0.1881 -13.13273"
+      scale="0.54134 0.54134 0.54134" rotation="0 -89.065 0.01" animation-mixer="clip: Take 001" light="type: point; 
+    intensity: 0.8;
+    distance: 10;">
+    </a-entity>
+
+    <!-- BBQ Grill -->
+    <a-entity gltf-model="./assets/grill-21/scene.gltf" position="7.14534 0.53934 -7.15011"
+      rotation="-0.006875493541569879 -41.632832267591006 -0.007448451336700701" scale="0.344 0.344 0.334"></a-entity>
+
+    <!-- Swing -->
+    <a-entity gltf-model="./assets/swing/scene.gltf" position="14.46502 0.01 -2.13633" scale="0.1645 0.1645 0.1645"
+      rotation="0 -89.065 0.01">
+    </a-entity>
+    <!-- End of Outside Park Perimeter -->
+
+
+    <!-- Start Middle of The Park -->
+    <!-- Garen -->
+    <a-entity gltf-model="./assets/garen/scene.gltf" position="-5.44161 0.78499 -7.82676"
+      rotation="0 51.51177057123666 0" scale="0.564 0.564 0.574"></a-entity>
+
+    <!-- Warrior -->
+    <a-entity gltf-model="./assets/warrior/scene.gltf" position="12.11014 0.02641 -6.04194"
+      rotation="0 -62.611681936306105 0" scale="0.37267 0.37267 0.37927" animation-mixer="clip: Idle"></a-entity>
+    <!-- End Middle of The Park -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- fix -->
+    <!-- <a-entity gltf-model="./assets/rock-main/scene.gltf" position="1.097 3.400 5.08714"></a-entity>
+    <a-entity fbx-model="src: url(./assets/dropout_bear/Dying);"></a-entity> -->
+
+
+
+
+    <!-- <a-entity gltf-model="./assets/grill/scene.gltf" position="5.097 2.400 5.08714"></a-entity>
+    <a-entity gltf-model="./assets/grill-main/scene.gltf" position="2.097 2.400 -2.08714"></a-entity>
+    -->
+
+
+
+
+
+
+    <!-- Does Not WORK  -->
+    <!-- <a-entity gltf-model="./assets/wooden_bench/scene.gltf" position="-5.097 0.400 -2.08714"></a-entity>
+    <a-entity gltf-model="./assets/luna/scene.gltf" position="1.097 0.400 -2.08714"></a-entity>
+    <a-entity gltf-model="./assets/griller/scene.gltf" position="0.097 1.400 -4.08714"></a-entity> 
+    <a-entity gltf-model="./assets/rock-sub/scene.gltf" position="2.097 2.400 5.08714"></a-entity>
+    <a-entity gltf-model="./assets/rock-sm/scene.gltf" position="5.097 2.400 5.08714"></a-entity>
+  
+  
+  
+  
+  -->
+
+
+
+
+
+
+
+
+
+
+
+
+  </a-scene>
+</body>
+
+</html>

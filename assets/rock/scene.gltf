@@ -1,0 +1,375 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 306,
+      "max": [
+        0.64504998922348022,
+        0.44999000430107117,
+        -0.91036999225616455
+      ],
+      "min": [
+        -0.26535999774932861,
+        -0.52003002166748047,
+        -2.7636799812316895
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 3672,
+      "componentType": 5126,
+      "count": 306,
+      "max": [
+        0.99703234434127808,
+        0.99309712648391724,
+        0.99629616737365723
+      ],
+      "min": [
+        -0.99822044372558594,
+        -0.9999890923500061,
+        -0.96763676404953003
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 306,
+      "max": [
+        0.99500960111618042,
+        0.99320304393768311,
+        0.94420713186264038,
+        1
+      ],
+      "min": [
+        -0.99987351894378662,
+        -0.99429422616958618,
+        -0.99902164936065674,
+        1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 306,
+      "max": [
+        0.96324998140335083,
+        0.97452998161315918
+      ],
+      "min": [
+        0.054150000214576721,
+        0.036079999059438705
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 1521,
+      "max": [
+        305
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Ozonek (https://sketchfab.com/ozonek)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/models/bcfc084c997f4c019d404bb92dcc4d2c",
+      "title": "A Simple Rock"
+    },
+    "generator": "Sketchfab-3.18.6",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 6084,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2448,
+      "byteOffset": 6084,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 7344,
+      "byteOffset": 8532,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4896,
+      "byteOffset": 15876,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 20772,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "extensionsUsed": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "images": [
+    {
+      "uri": "textures/Material_diffuse.png"
+    },
+    {
+      "uri": "textures/Material_normal.png"
+    },
+    {
+      "uri": "textures/Material_specularGlossiness.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseFactor": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "diffuseTexture": {
+            "index": 0,
+            "texCoord": 0
+          },
+          "glossinessFactor": 0.39000000000000001,
+          "specularFactor": [
+            0.67000000000000004,
+            0.67000000000000004,
+            0.67000000000000004
+          ],
+          "specularGlossinessTexture": {
+            "index": 2,
+            "texCoord": 0
+          }
+        }
+      },
+      "name": "Material",
+      "normalTexture": {
+        "index": 1,
+        "scale": 1,
+        "texCoord": 0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Rock_Low_Poly_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3,
+        5,
+        7,
+        9
+      ],
+      "name": "Root"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        0.27878999999999998,
+        -0,
+        0.96035000000000004,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.96035000000000004,
+        0,
+        0.27878999999999998,
+        0,
+        -1.7392700000000001,
+        -0,
+        0.37704000000000004,
+        1
+      ],
+      "name": "Rock_Low_Poly"
+    },
+    {
+      "mesh": 0,
+      "name": "Rock_Low_Poly_0"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        0.73145000000000004,
+        -0.66416000000000008,
+        0.15451000000000004,
+        0,
+        0.42680000000000007,
+        0.62263000000000013,
+        0.65588000000000013,
+        0,
+        -0.53181,
+        -0.41380000000000006,
+        0.73888000000000009,
+        0,
+        -1.1683700000000001,
+        -2.5903800000000001,
+        1.3634199999999999,
+        1
+      ],
+      "name": "Sun"
+    },
+    {
+      "name": "Sun"
+    },
+    {
+      "children": [
+        8
+      ],
+      "matrix": [
+        -0.98794999999999999,
+        -0.0090000000000000028,
+        0.15451000000000004,
+        0,
+        0.10938000000000001,
+        -0.74690000000000012,
+        0.65588000000000013,
+        0,
+        0.10950000000000001,
+        0.66488000000000014,
+        0.73888000000000009,
+        0,
+        0.86517000000000011,
+        3.4829499999999998,
+        1.3634199999999999,
+        1
+      ],
+      "name": "Sun.001"
+    },
+    {
+      "name": "Sun.001"
+    },
+    {
+      "children": [
+        10
+      ],
+      "matrix": [
+        0.46441000000000004,
+        0.87730000000000008,
+        0.12110000000000001,
+        0,
+        0.83413000000000004,
+        -0.38736000000000009,
+        -0.39265000000000005,
+        0,
+        -0.29757000000000006,
+        0.28337000000000007,
+        -0.91168000000000005,
+        0,
+        -2.18289,
+        1.9197399999999998,
+        -6.7352000000000007,
+        1
+      ],
+      "name": "Sun.002"
+    },
+    {
+      "name": "Sun.002"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}
+
