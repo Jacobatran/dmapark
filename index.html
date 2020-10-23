@@ -7,7 +7,11 @@
   <!-- Libs -->
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
-  <script src="/aframe-extras/dist/aframe-extras.loaders.min.js"></script>
+  <script src="./aframe-extras/dist/aframe-extras.loaders.min.js"></script>
+
+  <!-- Included -->
+  <script src="./aframe-extras/dist/aframe-extras.js"></script>
+  <script src="./aframe-extras/dist/aframe-extras.min.js"></script>
 
 </head>
 
@@ -87,25 +91,25 @@
 
     <!-- Poly Girl -->
     <a-entity gltf-model="./assets/poly-girl/scene.gltf" position="0.502 0.01 -3.35388" scale="0.86832 0.86832 0.86832"
-      animation-mixer="clip: Idle 3" rotation="0 -15.457 0" visible="">
+      animation-mixer="clip: Idle 3;" rotation="0 -15.457 0" visible="">
     </a-entity>
     <!-- Horse -->
     <a-entity gltf-model="./assets/horse/scene.gltf" position="0.99433 1.21615 -3.9462" scale="0.00283 0.00283 0.00272"
-      rotation="0 18.68186186803562 0"></a-entity>
+      rotation="0 18.68186186803562 0" animation-mixer="clip: Armature|idle;"></a-entity>
 
     <!-- Dog Shepherd Walk -->
     <a-entity gltf-model="./assets/shepherd/scene.gltf"
       position="3.620936414685165 -0.13182731140998424 -7.1771130080941425" scale="0.046 0.05 0.046"
-      animation-mixer="clip: WalkCycle"
+      animation-mixer="clip: WalkCycle;"
       animation="property: position; to: 5 0 0; dur: 10000; easing: linear; loop: true">
     </a-entity>
     <!-- Dog Shepherd Scratch -->
     <a-entity gltf-model="./assets/shepherd/scene.gltf" position="-1.79475 -0.00548 -5.95173" scale="0.046 0.05 0.046"
-      animation-mixer="clip: SitScratchEar" rotation="0 35.26 0">
+      animation-mixer="clip: SitScratchEar;" rotation="0 35.26 0">
     </a-entity>
     <!-- Floating Robot -->
     <a-entity gltf-model="./assets/flobot/scene.gltf" position="-1.52855 0.81804 -0.78355"
-      scale="0.01335 0.01335 0.01335" animation-mixer="clip: Take 001" rotation="0 97.53288659173464 0">
+      scale="0.01335 0.01335 0.01335" animation-mixer="clip: Take 001;" rotation="0 97.53288659173464 0">
     </a-entity>
     <!-- End of Around The CampFire -->
 
@@ -127,10 +131,10 @@
       rotation="0 109.43379295439698 0" id="rock-2"></a-entity>
     <!-- Skeleton  -->
     <a-entity gltf-model="./assets/skeleton/scene.gltf" position="-11.70824 0.00877 8.61936" visible=""
-      rotation="0 118.66127824497887 0" animation-mixer="clip: Animation" scale="0.761 0.761 0.761"></a-entity>
+      rotation="0 118.66127824497887 0" animation-mixer="clip: Animation;" scale="0.761 0.761 0.761"></a-entity>
     <!-- Naked Man -->
     <a-entity gltf-model="./assets/poly-man/scene.gltf" position="-8.63052 0.04197 3.49264"
-      rotation="0 118.66127824497887 0" animation-mixer="clip: Stay" scale="0.012 0.012 0.012"></a-entity>
+      rotation="0 118.66127824497887 0" animation-mixer="clip: Take 001;" scale="0.012 0.012 0.012"></a-entity>
 
 
     <!-- Spawn Shed -->
@@ -151,7 +155,7 @@
 
     <!-- Floating Cystal -->
     <a-entity gltf-model="./assets/crystal/scene.gltf" position="14.23108 0.1881 -13.13273"
-      scale="0.54134 0.54134 0.54134" rotation="0 -89.065 0.01" animation-mixer="clip: Take 001" light="type: point; 
+      scale="0.54134 0.54134 0.54134" rotation="0 -89.065 0.01" animation-mixer="clip: Take 001;" light="type: point; 
     intensity: 0.8;
     distance: 10;">
     </a-entity>
@@ -174,7 +178,7 @@
 
     <!-- Warrior -->
     <a-entity gltf-model="./assets/warrior/scene.gltf" position="12.11014 0.02641 -6.04194"
-      rotation="0 -62.611681936306105 0" scale="0.37267 0.37267 0.37927" animation-mixer="clip: Idle"></a-entity>
+      rotation="0 -62.611681936306105 0" scale="0.37267 0.37267 0.37927" animation-mixer="clip: Idle;"></a-entity>
     <!-- End Middle of The Park -->
 
 

@@ -1435,7 +1435,7 @@
           }
         }
       ],
-      "name": "metarig.001|metarig.001Action.002",
+      "name": "Take 001",
       "samplers": [
         {
           "input": 15,
@@ -2583,4 +2583,3 @@
     }
   ]
 }
-
