@@ -4,13 +4,13 @@
 
   <title>Virtual Park</title>
 
-  <!-- Libs -->
+  <!-- Libs Installation Scripts -->
+
   <!-- a-frame v1.0.4 -->
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <!-- environment component -->
   <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
-
-
+  <!-- a-frame extras -->
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
 
@@ -23,7 +23,13 @@
   lightPosition:  [object Object];  fog:  0.02;  ground:  noise;  groundYScale:  4.18;  groundTexture:  squares;  groundColor:  #937a24;  groundColor2:  #987d2e;  dressing:  trees;  
   dressingAmount:  598;  dressingColor:  #717416;  dressingScale:  5.7;  dressingVariance:  [object Object];  gridColor:  #c5a543;  dressingOnPlayArea:  0.01">
 
+
+    <!-- TESTING GROUND FOR NEW IMPLMENTATIONS -->
     <!-- Camera Movement Controls -->
+    <!-- video -->
+    <!-- <a-video src="./assets/fox.mp4" loop="true" width="8" height="4.5" position="0 -147.64148352269592 0"></a-video> -->
+
+
 
 
 
@@ -34,12 +40,13 @@
     <a-entity light=" type: directional; color: #FFF; intensity: 0.30" position="0.15778 8.39602 -30.56654"></a-entity>
 
 
-
     <!-- Start of Sky Kites -->
     <!-- Kite 1 Middle Kite / Animated -->
     <a-entity gltf-model="./assets/kite/scene.gltf" position="-10.0564 8.48164 5.08714"
       animation="property: position; to: 1 18 -3; dur: 9000; easing: linear; loop: true">
     </a-entity>
+
+
     <!-- Kite 2 Top Kite / Animated -->
     <a-entity gltf-model="./assets/kite/scene.gltf" position="-0.181 12.0309 15.50433" scale="0.54762 0.54762 0.54762"
       rotation="-180 -34.34 -180" id="kite-3"
@@ -91,10 +98,8 @@
       animation-mixer="clip: Take 001; timeScale: 1.75">
     </a-entity>
     <!-- Campfire PointLight -->
-    <a-entity light="type: point; 
-        intensity: 0.8;
-        distance: 10;" position="0.502 2 -1.564"></a-entity>
-
+    <a-entity light="type: point; intensity: 1.8; distance: 10.09" position="0.4271 0.33529 -1.53772"
+      id="campfire pLight"></a-entity>
     <!-- Poly Girl -->
     <a-entity gltf-model="./assets/poly-girl/scene.gltf" position="0.502 0.01 -3.35388" scale="0.86832 0.86832 0.86832"
       animation-mixer="clip: Idle 3;" rotation="0 -15.457 0" visible="">
@@ -129,7 +134,6 @@
     <a-entity gltf-model="./assets/cybertruck/scene.gltf" position="-5.20789 -0.02972 11.98529" rotation="0 58.251 0"
       scale="1.06507 1.06507 1.08395"></a-entity>
 
-
     <!-- Rock -->
     <a-entity gltf-model="./assets/rock/scene.gltf" position="-12.27457 0.04518 5.46301" scale="1.90392 1.90392 1.82324"
       rotation="0 -38.725 0" id="rock"></a-entity>
@@ -159,11 +163,12 @@
       rotation="0 -90 -0.0011459155902616466" scale="0.00844 0.00844 0.0082"></a-entity>
 
 
-    <!-- Floating Cystal -->
+    <!-- Floating Crystal -->
     <a-entity gltf-model="./assets/crystal/scene.gltf" position="14.23108 0.1881 -13.13273"
-      scale="0.54134 0.54134 0.54134" rotation="0 -89.065 0.01" animation-mixer="clip: Take 001;" light="type: point; 
-    intensity: 0.8;
-    distance: 10;">
+      scale="0.54134 0.54134 0.54134" rotation="0 -89.065 0.01" animation-mixer="clip: Take 001;">
+    </a-entity>
+    <!-- Crystal Light -->
+    <a-entity light="type: point; intensity: 0.90; distance: 5" position="14.183 1.262 -13.095" id="crystal pLight">
     </a-entity>
 
     <!-- BBQ Grill -->
